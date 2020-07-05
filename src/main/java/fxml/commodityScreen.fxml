@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="519.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CommodityController">
+   <children>
+      <Label fx:id="tips" alignment="CENTER" layoutX="127.0" layoutY="30.0" prefHeight="53.0" prefWidth="346.0" text="请选择您要购买的商品类型">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="food" layoutX="88.0" layoutY="123.0" mnemonicParsing="false" onAction="#clickFood" prefHeight="53.0" prefWidth="163.0" text="食品类">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="daily" layoutX="365.0" layoutY="123.0" mnemonicParsing="false" onAction="#clickDaily" prefHeight="53.0" prefWidth="163.0" text="日用品类">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="stationery" layoutX="88.0" layoutY="207.0" mnemonicParsing="false" onAction="#clickStationery" prefHeight="53.0" prefWidth="163.0" text="文具类">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="home" layoutX="365.0" layoutY="207.0" mnemonicParsing="false" onAction="#clickHome" prefHeight="53.0" prefWidth="163.0" text="家居类">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="cloth" layoutX="88.0" layoutY="294.0" mnemonicParsing="false" onAction="#clickCloth" prefHeight="53.0" prefWidth="163.0" text="服饰类">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="drink" layoutX="365.0" layoutY="294.0" mnemonicParsing="false" onAction="#clickDrink" prefHeight="53.0" prefWidth="163.0" text="饮品类">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="fresh" layoutX="88.0" layoutY="384.0" mnemonicParsing="false" onAction="#clickFresh" prefHeight="53.0" prefWidth="163.0" text="生鲜类">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="product" layoutX="365.0" layoutY="384.0" mnemonicParsing="false" onAction="#clickProduct" prefHeight="53.0" prefWidth="163.0" text="数码产品类">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <ListView fx:id="productionList" layoutX="-1.0" layoutY="76.0" prefHeight="444.0" prefWidth="600.0" visible="false" />
+      <Button fx:id="return1" layoutX="473.0" layoutY="456.0" mnemonicParsing="false" onAction="#clickReturn" prefHeight="42.0" prefWidth="100.0" text="返回" visible="false" />
+      <Pane fx:id="buypane" layoutX="134.0" layoutY="83.0" prefHeight="325.0" prefWidth="332.0" style="-fx-background-color: #FFFFCC;" visible="false">
+         <children>
+            <Label layoutX="48.0" layoutY="28.0" prefHeight="29.0" prefWidth="94.0" text="商品名称" />
+            <Label fx:id="name" layoutX="168.0" layoutY="28.0" prefHeight="29.0" prefWidth="114.0" text="name" />
+            <Label layoutX="48.0" layoutY="76.0" prefHeight="29.0" prefWidth="71.0" text="商品类型" />
+            <Label fx:id="type1" layoutX="168.0" layoutY="76.0" prefHeight="29.0" prefWidth="79.0" text="类型" />
+            <Label layoutX="48.0" layoutY="174.0" prefHeight="29.0" prefWidth="71.0" text="商品库存" />
+            <Label fx:id="num" layoutX="166.0" layoutY="174.0" prefHeight="29.0" prefWidth="59.0" text="库存" />
+            <Label layoutX="51.0" layoutY="124.0" prefHeight="29.0" prefWidth="65.0" text="商品产地" />
+            <Label fx:id="made" layoutX="166.0" layoutY="124.0" prefHeight="29.0" prefWidth="59.0" text="产地" />
+            <Button layoutX="45.0" layoutY="251.0" mnemonicParsing="false" onAction="#clicktobuy" prefHeight="42.0" prefWidth="94.0" text="确认购买" />
+            <Label fx:id="error1" layoutX="109.0" layoutY="211.0" prefHeight="29.0" prefWidth="114.0" text="库存不足，无法购买" textFill="#dd1212" visible="false" />
+            <Button layoutX="200.0" layoutY="251.0" mnemonicParsing="false" onAction="#clicktoreturn" prefHeight="42.0" prefWidth="94.0" text="返回" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

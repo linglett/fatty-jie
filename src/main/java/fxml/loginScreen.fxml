@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Label layoutX="205.0" layoutY="26.0" prefHeight="45.0" prefWidth="330.0" text="超市管理系统">
+         <font>
+            <Font size="52.0" />
+         </font>
+      </Label>
+      <Label layoutX="181.0" layoutY="134.0" prefHeight="33.0" prefWidth="65.0" text="用户名" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="password" layoutX="257.0" layoutY="205.0" prefHeight="45.0" prefWidth="256.0" />
+      <Label layoutX="196.0" layoutY="215.0" text="密码" textFill="#ff4545">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="sure" layoutX="264.0" layoutY="310.0" mnemonicParsing="false" onAction="#action" prefHeight="45.0" prefWidth="91.0" text="确定" textFill="#964b4b" />
+      <Button fx:id="register" layoutX="403.0" layoutY="310.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="45.0" prefWidth="116.0" text="注册" textFill="#e12727">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="error" layoutX="264.0" layoutY="251.0" prefHeight="20.0" prefWidth="249.0" text="用户名或密码错误" textFill="#c71818" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="257.0" layoutY="128.0" prefHeight="45.0" prefWidth="256.0" />
+      <RadioButton fx:id="selectCus" layoutX="263.0" layoutY="267.0" mnemonicParsing="false" onAction="#clickCus" prefHeight="24.0" prefWidth="93.0" text="顾客">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="selectAdm" layoutX="403.0" layoutY="267.0" mnemonicParsing="false" onAction="#clickAdm" prefHeight="24.0" prefWidth="93.0" text="管理员">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>

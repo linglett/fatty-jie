@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="573.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdministratorController">
+   <children>
+      <Pane prefHeight="86.0" prefWidth="762.0" style="-fx-background-color: #B0E0E6;">
+         <children>
+            <Label alignment="CENTER" layoutX="272.0" layoutY="20.0" prefHeight="46.0" prefWidth="219.0" text="超市管理系统">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="86.0" prefHeight="488.0" prefWidth="133.0">
+         <children>
+            <VBox onMouseClicked="#clickQueryProducts" prefHeight="78.0" prefWidth="133.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="79.0" prefWidth="724.0" style="-fx-background-color: #D3D3D3;" text="查询系统" textFill="#000000b5">
+                     <font>
+                        <Font name="Tahoma" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutY="78.0" onMouseClicked="#clickCustom" prefHeight="78.0" prefWidth="133.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="79.0" prefWidth="724.0" style="-fx-background-color: #D3D3D3;" text="顾客记录" textFill="#000000b5">
+                     <font>
+                        <Font name="Tahoma" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutY="156.0" onMouseClicked="#clickPreserve" prefHeight="78.0" prefWidth="133.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="79.0" prefWidth="724.0" style="-fx-background-color: #D3D3D3;" text="保存到本地" textFill="#000000b5">
+                     <font>
+                        <Font name="Tahoma" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="welcome" layoutX="133.0" layoutY="86.0" prefHeight="488.0" prefWidth="629.0">
+         <children>
+            <Label alignment="CENTER" layoutX="154.0" layoutY="174.0" prefHeight="86.0" prefWidth="321.0" text="welcom to use！" textFill="#05b5a1">
+               <font>
+                  <Font name="Microsoft YaHei UI" size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="purchase" layoutX="133.0" layoutY="86.0" prefHeight="488.0" prefWidth="629.0" visible="false">
+         <children>
+            <ListView fx:id="QuerySystem" layoutX="14.0" layoutY="44.0" onMouseClicked="#listViewClick" prefHeight="444.0" prefWidth="629.0" />
+            <Button layoutX="466.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickAdd" text="添加" />
+            <Button layoutX="522.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickFlush" text="刷新" />
+            <TextField fx:id="selectmarch" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="201.0" promptText="输入商品名称或者商品编号" />
+            <Button fx:id="selectmarchbutton" layoutX="243.0" layoutY="14.0" mnemonicParsing="false" onAction="#selectMarch" text="查询" />
+            <Pane fx:id="operation" layoutX="149.0" layoutY="110.0" prefHeight="238.0" prefWidth="242.0" style="-fx-background-color: #B0E0E6;" visible="false">
+               <children>
+                  <Button layoutX="173.0" layoutY="194.0" mnemonicParsing="false" onAction="#operationOk" text="确定" />
+                  <Button layoutX="41.0" layoutY="58.0" mnemonicParsing="false" onAction="#soldOut" text="下架" />
+                  <Button layoutX="41.0" layoutY="104.0" mnemonicParsing="false" onAction="#stock" text="进货+1" />
+                  <Label fx:id="labelInventory" layoutX="41.0" layoutY="14.0" prefHeight="30.0" prefWidth="190.0" text="库存为" />
+                  <Button layoutX="36.0" layoutY="152.0" mnemonicParsing="false" onAction="#changeMerch" text="修改商品" />
+               </children>
+            </Pane>
+         </children></Pane>
+      <Pane fx:id="change1" layoutX="267.0" layoutY="130.0" prefHeight="350.0" prefWidth="344.0" style="-fx-background-color: #B0E0E6;" visible="false">
+         <children>
+            <TextField fx:id="MerchID" layoutX="105.0" layoutY="36.0" />
+            <TextField fx:id="MerchMade" layoutX="105.0" layoutY="109.0" />
+            <TextField fx:id="MerchName" layoutX="105.0" layoutY="71.0" />
+            <TextField fx:id="MerchNum" layoutX="105.0" layoutY="144.0" />
+            <Label layoutX="26.0" layoutY="40.0" prefHeight="20.0" prefWidth="62.0" text="商品编号" />
+            <Label layoutX="26.0" layoutY="75.0" prefHeight="20.0" prefWidth="62.0" text="商品名称" />
+            <Label layoutX="26.0" layoutY="113.0" prefHeight="20.0" prefWidth="62.0" text="商品产地" />
+            <Label layoutX="26.0" layoutY="148.0" prefHeight="20.0" prefWidth="62.0" text="商品库存" />
+            <TextField fx:id="MerchPrice" layoutX="105.0" layoutY="177.0" />
+            <Label layoutX="26.0" layoutY="181.0" prefHeight="20.0" prefWidth="62.0" text="商品价格" />
+            <Button layoutX="100.0" layoutY="306.0" mnemonicParsing="false" onAction="#clickIt" prefHeight="23.0" prefWidth="72.0" text="确认" />
+            <Label layoutX="8.0" layoutY="218.0" prefHeight="20.0" prefWidth="92.0" text="商品生产日期" />
+            <DatePicker fx:id="MerchDate" layoutX="105.0" layoutY="214.0" prefHeight="23.0" prefWidth="161.0" />
+            <TextField fx:id="MerchType" layoutX="105.0" layoutY="252.0" />
+            <Label layoutX="18.0" layoutY="256.0" prefHeight="20.0" prefWidth="70.0" text="商品类型" />
+            <Button layoutX="193.0" layoutY="306.0" mnemonicParsing="false" onAction="#change1Close" prefHeight="30.0" prefWidth="62.0" text="取消" />
+         </children>
+      </Pane>
+      <Pane fx:id="change2" layoutX="277.0" layoutY="140.0" prefHeight="350.0" prefWidth="344.0" style="-fx-background-color: #B0E0E6;" visible="false">
+         <children>
+            <TextField fx:id="MerchID1" layoutX="105.0" layoutY="36.0" />
+            <TextField fx:id="MerchMade1" layoutX="105.0" layoutY="109.0" />
+            <TextField fx:id="MerchName1" layoutX="105.0" layoutY="71.0" />
+            <TextField fx:id="MerchNum1" layoutX="105.0" layoutY="144.0" />
+            <Label layoutX="26.0" layoutY="40.0" prefHeight="20.0" prefWidth="62.0" text="商品编号" />
+            <Label layoutX="26.0" layoutY="75.0" prefHeight="20.0" prefWidth="62.0" text="商品名称" />
+            <Label layoutX="26.0" layoutY="113.0" prefHeight="20.0" prefWidth="62.0" text="商品产地" />
+            <Label layoutX="26.0" layoutY="148.0" prefHeight="20.0" prefWidth="62.0" text="商品库存" />
+            <TextField fx:id="MerchPrice1" layoutX="105.0" layoutY="177.0" />
+            <Label layoutX="26.0" layoutY="181.0" prefHeight="20.0" prefWidth="62.0" text="商品价格" />
+            <Button layoutX="96.0" layoutY="304.0" mnemonicParsing="false" onAction="#changeSave" prefHeight="23.0" prefWidth="72.0" text="确认" />
+            <Label layoutX="4.0" layoutY="218.0" prefHeight="20.0" prefWidth="92.0" text="商品生产日期" />
+            <DatePicker fx:id="MerchDate1" layoutX="105.0" layoutY="214.0" prefHeight="23.0" prefWidth="161.0" />
+            <TextField fx:id="MerchType1" layoutX="105.0" layoutY="252.0" />
+            <Label layoutX="18.0" layoutY="256.0" prefHeight="20.0" prefWidth="70.0" text="商品类型" />
+            <Button layoutX="181.0" layoutY="304.0" mnemonicParsing="false" onAction="#changeDown" prefHeight="30.0" prefWidth="72.0" text="取消" />
+         </children>
+      </Pane>
+      <Pane fx:id="list" layoutX="133.0" layoutY="86.0" prefHeight="488.0" prefWidth="629.0" visible="false">
+         <children>
+            <ListView fx:id="customerList" prefHeight="488.0" prefWidth="629.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
